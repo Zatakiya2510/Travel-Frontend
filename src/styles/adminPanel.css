@@ -1,0 +1,5 @@
+.add_button {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    margin-top: 20px; /* Keep the margin at the top */
+}
