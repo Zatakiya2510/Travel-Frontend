@@ -16,7 +16,7 @@ const Register = () => {
     role: "user",
   });
 
-  const [otpDigits, setOtpDigits] = useState(["", "", "", "", "", ""]);
+  const [otpDigits, setOtpDigits] = useState(["", "", "", ""]);
   const [step, setStep] = useState(1); // Step 1: Email → 2: OTP → 3: Register
   const { dispatch } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -25,24 +25,16 @@ const Register = () => {
     setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }));
   };
 
-<<<<<<< HEAD
+  // ✅ Step 1: Send OTP
   const sendOTP = async () => {
-=======
-  // ✅ **Step 1: Send OTP**
-   const sendOTP = async () => {
-    console.log("Sending OTP to:", `${BASE_URL}/auth/send-otp`);
-  
->>>>>>> afd656fd6f75d0ce237e6db018141f377724502f
     try {
       const res = await fetch(`${BASE_URL}/auth/send-otp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: credentials.email }),
       });
-  
+
       const result = await res.json();
-      console.log("API Response:", result);  // 🔍 Debugging log
-  
       if (res.ok) {
         Swal.fire("Success", "OTP sent to your email", "success");
         setStep(2);
@@ -50,18 +42,15 @@ const Register = () => {
         Swal.fire("Error", result.message, "error");
       }
     } catch (err) {
-      console.error("Error:", err);  // 🔍 Debugging log
+      console.error("Error:", err);
       Swal.fire("Error", "Failed to send OTP. Try again.", "error");
     }
   };
-<<<<<<< HEAD
 
-=======
-  // ✅ **Step 2: Verify OTP**
->>>>>>> afd656fd6f75d0ce237e6db018141f377724502f
+  // ✅ Step 2: Verify OTP
   const verifyOTP = async () => {
     const otp = otpDigits.join("");
-    if (otp.length < 6) {
+    if (otp.length < 4) {
       Swal.fire("Error", "Please enter the complete 6-digit OTP", "error");
       return;
     }
@@ -159,8 +148,8 @@ const Register = () => {
                         marginBottom: "20px",
                       }}
                       onPaste={(e) => {
-                        const pasted = e.clipboardData.getData("text").trim().slice(0, 6);
-                        if (/^\d{6}$/.test(pasted)) {
+                        const pasted = e.clipboardData.getData("text").trim().slice(0, 4);
+                        if (/^\d{4}$/.test(pasted)) {
                           setOtpDigits(pasted.split(""));
                         }
                       }}
@@ -199,15 +188,13 @@ const Register = () => {
                         className="btn secondary__btn auth__btn"
                         onClick={verifyOTP}
                         style={{
-                          width: "240px", // 6 boxes * (35px width + 5px gap)
+                          width: "240px",
                           marginTop: "10px",
                         }}
                       >
                         Verify OTP
                       </Button>
                     </div>
-
-
                   </>
                 )}
 

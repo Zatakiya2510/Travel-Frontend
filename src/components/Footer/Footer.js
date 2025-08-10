@@ -142,6 +142,7 @@ const Footer = () => {
                     </h6>
 
                     <p className="mb-0">
+                      abhishekzatakiya25102004@gmail.com<br/>
                       dhruvipatel2945@gmail.com
                     </p>
 
@@ -158,6 +159,7 @@ const Footer = () => {
                     </h6>
 
                     <p className="mb-0">
+                      +91 6352342951 <br/>
                       +91 8734897671
                     </p>
 
@@ -171,7 +173,7 @@ const Footer = () => {
 
           <Col lg='12'>
             <p className="copyright">
-            <span><i class="ri-copyright-line"></i></span>Copyright {year}, design and devloped by Dhruvi Sapovadiya. All rights reserved.
+            <span><i class="ri-copyright-line"></i></span>Copyright {year}, design and devloped by Abhishek Zatakiya and Dhruvi Sapovadiya. All rights reserved.
             </p>
           </Col>
         </Row>
