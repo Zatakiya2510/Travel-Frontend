@@ -2,10 +2,10 @@ import React from 'react'
 import TourCard from '../../shared/TourCard.js'
 import { Col } from 'reactstrap'
 import useFetch from './../../hooks/useFetch.js'
-import { BASE_URL } from './../../utils/config.js'
+import { BASE_URL1 } from './../../utils/config.js'
 
 const FeaturedTourList = () => {
-    const { data: featuredTours, loading, error } = useFetch(`${BASE_URL}/tours/search/getFeaturedTours`)
+    const { data: featuredTours, loading, error } = useFetch(`${BASE_URL1}/tours/search/getFeaturedTours`)
 
     return (
         <>

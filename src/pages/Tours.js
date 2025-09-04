@@ -4,7 +4,7 @@ import '../styles/tour.css';
 import TourCard from './../shared/TourCard';
 import SearchBar from './../shared/SearchBar';
 import { Container, Row, Col } from "reactstrap";
-import { BASE_URL } from "../utils/config.js";
+import { BASE_URL1 } from "../utils/config.js";
 import useFetch from '../hooks/useFetch.js'
 import Newsletter from "../shared/NewsLetter.js";
 
@@ -12,8 +12,8 @@ const Tours = () => {
 
   const [pageCount, setPageCount] = useState(0);
   const [page, setPage] = useState(0);
-  const { data: tours, loading, error } = useFetch(`${BASE_URL}/tours?page=${page}`)
-  const { data: tourCount } = useFetch(`${BASE_URL}/tours/search/getTourCount`)
+  const { data: tours, loading, error } = useFetch(`${BASE_URL1}/tours?page=${page}`)
+  const { data: tourCount } = useFetch(`${BASE_URL1}/tours/search/getTourCount`)
 
   useEffect(() => {
     const pages = Math.ceil(tourCount / 8);

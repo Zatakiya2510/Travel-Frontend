@@ -7,7 +7,7 @@ import calculateAvgRating from '../utils/avgRating';
 import '../styles/tour-details.css';
 import Booking from '../components/Booking/Booking';
 import useFetch from '../hooks/useFetch';
-import { BASE_URL } from '../utils/config';
+import { BASE_URL1 } from '../utils/config';
 import { AuthContext } from './../context/AuthContext';
 
 const TourDetails = () => {
@@ -15,7 +15,7 @@ const TourDetails = () => {
   const [tourRating, setTourRating] = useState(null);
   const reviewMsgRef = useRef('');
   const { user } = useContext(AuthContext);
-  const { data: tour, loading, error, refetch } = useFetch(`${BASE_URL}/tours/${id}`);
+  const { data: tour, loading, error, refetch } = useFetch(`${BASE_URL1}/tours/${id}`);
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -33,7 +33,7 @@ const TourDetails = () => {
         rating: tourRating,
       };
 
-      const res = await fetch(`${BASE_URL}/review/${id}`, {
+      const res = await fetch(`${BASE_URL1}/review/${id}`, {
         method: 'post',
         headers: {
           'content-type': 'application/json',

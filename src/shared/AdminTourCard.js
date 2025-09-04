@@ -8,7 +8,7 @@ const AdminTourCard = ({ tour, id }) => {
     const [dtour, setdTour] = useState({});
 
     useEffect(() => {
-        fetch(`https://travel-backend-1-fgwb.onrender.com/api/v1/tours/${id}`)
+        fetch(`https://tour-backend-i1a8.onrender.com/api/v1/tours/${id}`)
             .then((res) => res.json())
             .then((res) => setdTour(res));
     }, [id]);
@@ -55,7 +55,7 @@ const AdminTourCard = ({ tour, id }) => {
                         <button
                             className="action-btn delete-btn"
                             onClick={() => {
-                                fetch(`https://travel-backend-1-fgwb.onrender.com/api/v1/tours/${_id}`, { method: "DELETE" })
+                                fetch(`https://tour-backend-i1a8.onrender.com/api/v1/tours/${_id}`, { method: "DELETE" })
                                     .then((res) => {
                                         if (res.ok) {
                                             window.location.reload();

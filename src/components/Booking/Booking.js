@@ -4,7 +4,7 @@ import './booking.css'
 import { Form, FormGroup, ListGroup, ListGroupItem, Button, } from 'reactstrap';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
-import { BASE_URL } from '../../utils/config';
+import { BASE_URL1 } from '../../utils/config';
 
 const Booking = ({ tour, avgRating }) => {
 
@@ -49,7 +49,7 @@ const Booking = ({ tour, avgRating }) => {
             if (!user || user == undefined || user == null) {
                 return alert('Please sign in');
             }
-            const res = await fetch(`${BASE_URL}/booking`, {
+            const res = await fetch(`${BASE_URL1}/booking`, {
                 method: 'post',
                 headers: {
                     'content-type': 'application/json',

@@ -4,7 +4,7 @@ import { Container, Row, Col, Form, FormGroup, Button } from "reactstrap";
 import { Link, useNavigate } from "react-router-dom";
 import loginImg from "../assets/images/login.png";
 import userIcon from "../assets/images/user.png";
-import { BASE_URL } from "./../utils/config.js";
+import { BASE_URL1 } from "./../utils/config.js";
 import Swal from "sweetalert2";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
@@ -21,7 +21,7 @@ const ForgotPassword = () => {
   const handleSendOTP = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`${BASE_URL}/auth/send-reset-otp`, {
+      const res = await fetch(`${BASE_URL1}/auth/send-reset-otp`, {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ email }),
@@ -50,7 +50,7 @@ const ForgotPassword = () => {
     }
 
     try {
-      const res = await fetch(`${BASE_URL}/auth/verify-reset-otp`, {
+      const res = await fetch(`${BASE_URL1}/auth/verify-reset-otp`, {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ email, otp }),
@@ -78,7 +78,7 @@ const ForgotPassword = () => {
     }
 
     try {
-      const res = await fetch(`${BASE_URL}/auth/set-new-password`, {
+      const res = await fetch(`${BASE_URL1}/auth/set-new-password`, {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ email, newPassword, confirmPassword }),

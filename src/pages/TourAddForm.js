@@ -20,7 +20,7 @@ const TourAddForm = () => {
 
     useEffect(() => {
         if (param.id) {
-            fetch(`https://travel-backend-1-fgwb.onrender.com/api/v1/tours/${param.id}`)
+            fetch(`https://tour-backend-i1a8.onrender.com/api/v1/tours/${param.id}`)
                 .then(res => res.json())
                 .then(res => {
                     setTour(res.data);
@@ -35,8 +35,8 @@ const TourAddForm = () => {
 
     const handleSubmit = () => {
         const url = param.id
-            ? `https://travel-backend-1-fgwb.onrender.com/api/v1/tours/${param.id}`
-            : "https://travel-backend-1-fgwb.onrender.com/api/v1/tours";
+            ? `https://tour-backend-i1a8.onrender.com/api/v1/tours/${param.id}`
+            : "https://tour-backend-i1a8.onrender.com/api/v1/tours";
 
         const method = param.id ? "PUT" : "POST";
 

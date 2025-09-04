@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import registerImg from "../assets/images/register.png";
 import userIcon from "../assets/images/user.png";
 import { AuthContext } from "./../context/AuthContext.js";
-import { BASE_URL } from "./../utils/config.js";
+import { BASE_URL1 } from "./../utils/config.js";
 import Swal from "sweetalert2";
 
 const Register = () => {
@@ -28,7 +28,7 @@ const Register = () => {
   // ✅ Step 1: Send OTP
   const sendOTP = async () => {
     try {
-      const res = await fetch(`${BASE_URL}/auth/send-otp`, {
+      const res = await fetch(`${BASE_URL1}/auth/send-otp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: credentials.email }),
@@ -96,7 +96,7 @@ const Register = () => {
     }
 
     try {
-      const res = await fetch(`${BASE_URL}/auth/verify-otp`, {
+      const res = await fetch(`${BASE_URL1}/auth/verify-otp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: credentials.email, otp }),
@@ -164,7 +164,7 @@ const Register = () => {
     }
 
     try {
-      const res = await fetch(`${BASE_URL}/auth/register`, {
+      const res = await fetch(`${BASE_URL1}/auth/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...credentials, otp }),
