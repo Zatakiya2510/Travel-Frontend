@@ -8,7 +8,7 @@ export default function AdminBookingTour() {
     const [booking, setBooking] = useState([]);
 
     useEffect(() => {
-        fetch("https://tour-backend-i1a8.onrender.com/api/v1/booking")
+        fetch("https://travel-backend-liart.vercel.app/api/v1/booking")
             .then((res) => res.json())
             .then((res) => {
                 console.warn(res.data);
