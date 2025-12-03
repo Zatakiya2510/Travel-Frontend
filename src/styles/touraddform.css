@@ -1,0 +1,50 @@
+/* tour-details.css */
+
+/* Container */
+.form__table {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Form */
+.form-control {
+    margin-bottom: 15px;
+}
+
+/* Label */
+.form-group label {
+    font-weight: bold;
+}
+
+/* Button */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Form row */
+.form-row {
+    margin-bottom: 15px;
+}
+
+/* Centering button */
+.btn-group {
+    display: flex;
+    justify-content: center;
+}
+
+/* Full width button */
+.btn-full-width {
+    width: 100%;
+}
+
+/* Optional: Adding some padding to the form */
+.form-group {
+    padding: 10px;
+}

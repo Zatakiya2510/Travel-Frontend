@@ -1,0 +1,262 @@
+.tour__img img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.Card {
+    border: none !important;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 50px -10px;
+}
+
+.tour__img {
+    position: relative;
+}
+
+.tour__img span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: max-content;
+    height: max-content;
+    z-index: 10;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.3rem 0.5rem;
+    border-radius: 3px 0 0 0;
+}
+
+.card__top span i {
+    color: var(--secondary-color);
+}
+
+.tour__rating {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.tour__location {
+    color: var(--heading-color);
+    font-weight: 500;
+    font-size: .9rem;
+}
+
+.tour__rating i,
+.tour__location i {
+    font-size: 1rem;
+}
+
+.tour__title {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.tour__title a {
+    text-decoration: none;
+    color: var(--heading-color);
+    transition: .5s;
+}
+
+.tour__title a:hover {
+    color: var(--secondary-color);
+}
+
+.card__bottom h5 {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.card__bottom h5 span {
+    font-weight: 500;
+    color: var(--text-color);
+    font-size: 0.8rem;
+
+}
+
+.booking__btn1 {
+    background: var(--secondary-color) !important;
+    cursor: pointer;
+
+
+
+    .tour__img img {
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+    }
+
+
+
+
+
+    .Card {
+        border: none !important;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 50px -10px;
+    }
+
+    .tour__img {
+        position: relative;
+    }
+
+    .tour__img span {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: max-content;
+        height: max-content;
+        z-index: 10;
+        background: var(--primary-color);
+        color: #fff;
+        padding: 0.3rem 0.5rem;
+        border-radius: 3px 0 0 0;
+    }
+
+    .card__top span i {
+        color: var(--secondary-color);
+    }
+
+    .tour__rating {
+        font-size: 0.9rem;
+        color: var(--text-color);
+    }
+
+    .tour__location {
+        color: var(--heading-color);
+        font-weight: 500;
+        font-size: .9rem;
+    }
+
+    .tour__rating i,
+    .tour__location i {
+        font-size: 1rem;
+    }
+
+    .tour__title {
+        margin-top: 1rem;
+        font-size: 1.1rem;
+        cursor: pointer;
+    }
+
+    .tour__title a {
+        text-decoration: none;
+        color: var(--heading-color);
+        transition: .5s;
+    }
+
+    .tour__title a:hover {
+        color: var(--secondary-color);
+    }
+
+    .card__bottom h5 {
+        color: var(--secondary-color);
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+
+    .card__bottom h5 span {
+        font-weight: 500;
+        color: var(--text-color);
+        font-size: 0.8rem;
+
+    }
+
+    .booking__btn1 {
+        background: var(--secondary-color) !important;
+        cursor: pointer;
+        margin: 0rem 0rem 0rem 6.5rem !important;
+
+
+    }
+
+    .booking__btn1 a {
+
+        text-decoration: none;
+        font-size: .9rem;
+        color: #fff;
+    }
+
+    .booking__btn1 a:hover {
+        color: #fff;
+    }
+
+
+
+}
+
+.booking__btn1 a {
+    text-decoration: none;
+    font-size: .9rem;
+    color: #fff;
+}
+
+.booking__btn1 a:hover {
+    color: #fff;
+}
+
+.admin-actions {
+    display: flex;
+    align-items: center;
+}
+
+.action-btn {
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.edit-btn {
+    color: #28a745;
+    /* Green for edit */
+}
+
+.delete-btn {
+    color: #dc3545;
+    /* Red for delete */
+}
+
+.action-btn:hover {
+    transform: scale(1.1);
+}
+
+.card__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Ensures price is left, actions are right */
+    width: 100%;
+}
+
+.tour__price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    /* Adjust if needed */
+}
+
+.admin-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.action-btn {
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.edit-btn {
+    color: #28a745;
+    /* Green for edit */
+}
+
+.delete-btn {
+    color: #dc3545;
+    /* Red for delete */
+}
+
+.action-btn:hover {
+    transform: scale(1.1);
+}

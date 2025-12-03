@@ -1,0 +1,18 @@
+.review-table {
+    font-family: var(--font-name);
+    color: var(--text-color);
+}
+
+.review-table th {
+    text-align: center;
+    font-weight: bold;
+}
+
+.review-table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+button {
+    border-radius: 5px;
+}
